@@ -15,6 +15,22 @@
 </head>
 <body>
 
+	<div class="main">
+
+		<!-- Sign up form -->
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<div class="signup-form">
+						<h2 class="form-title">Sign up</h2>
+					
+						<form method="" action="" class="register-form"
+							id="register-form">
+							<div class="form-group">
+								<label for="name"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="name" id="name" placeholder="Your Name" />
+							</div>
 
 
 </body>

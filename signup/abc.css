@@ -5,9 +5,9 @@ body{
   background-attachment: fixed;  
   background-size: cover;
 }
-rcontent {
-  font-size: large
-  color white ;
+.content {
+  font-size: 42px;
+  color :#ffffff;
 }
 
   input[type=text], input[type=password] {

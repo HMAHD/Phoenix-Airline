@@ -1,4 +1,14 @@
 * {box-sizing: border-box}
+body{  
+ background-image: url('plane5.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+rcontent {
+  font-size: large
+  color white ;
+}
 
   input[type=text], input[type=password] {
   width: 100%;
@@ -11,7 +21,7 @@
 
 /*  background color  */
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: rgb(105, 25, 25);
   outline: none;
 }
 
@@ -35,7 +45,7 @@ button:hover {
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
-}
+} 
 
 /*cancelbtn and signupbtn  */
 .cancelbtn, .signupbtn {
@@ -61,7 +71,6 @@ button:hover {
   background-color: #474e5d;
   padding-top: 50px;
 }
-
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;

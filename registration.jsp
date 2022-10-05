@@ -62,6 +62,19 @@
 							</div>
 						</form>
 					</div>
+                    <div class="signup-image">
+						<figure>
+							<img src="images/signup-image.jpg" alt="sing up image">
+						</figure>
+						<a href="login.jsp" class="signup-image-link">I am already
+							member</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
 </body>
 <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

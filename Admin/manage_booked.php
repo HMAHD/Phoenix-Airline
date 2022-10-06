@@ -38,3 +38,43 @@ foreach($qry->fetch_array() as $k => $v){
 	</form>
 	</div>
 </div>
+<script>
+	$('#go').click(function(){
+		start_load()
+		$.ajax({
+			url:"get_fields.php?count="+$('#count').val(),
+			success:function(resp){
+				if(resp){
+					$('#row-field').prepend(resp)
+					$('#qty').hide()
+					$('#row-field').show()
+					end_load()
+				}
+			}
+
+		})
+	})
+	$('#book-flight').submit(function(e){
+		e.preventDefault()
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=update_booked',
+			method:"POST",
+			data:$(this).serialize(),
+			success:function(resp){
+				if(resp ==1 ){
+					$('.modal').modal('hide')
+					alert_toast("Booked Flight successfully updated.","success")
+					setTimeout(function(){
+						location.reload();
+					},1500)
+				}
+			}
+		})
+	})
+</script>
+<style>
+	#uni_modal .modal-footer{
+		display: none
+	}
+</style>

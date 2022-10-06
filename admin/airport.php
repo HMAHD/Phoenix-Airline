@@ -53,13 +53,38 @@
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
+							<tbody>
+								<?php 
+								$i = 1;
+								$cats = $conn->query("SELECT * FROM airport_list order by id asc");
+								while($row=$cats->fetch_assoc()):
+								?>
+								<tr>
+									<td class="text-center"><?php echo $i++ ?></td>
+									
+									<td class="">
+										 <b><?php echo $row['airport'] ?></b>
+									</td>
+
+									<td class="">
+										 <b><?php echo $row['location'] ?></b>
+									</td>
+									<td class="text-center">
+										<button class="btn btn-sm btn-primary edit_airline" type="button" data-id="<?php echo $row['id'] ?>" data-airport="<?php echo $row['airport'] ?>" data-location="<?php echo $row['location'] ?>" >Edit</button>
+										<button class="btn btn-sm btn-danger delete_airline" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+									</td>
+								</tr>
+								<?php endwhile; ?>
+							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
-
-        </div>
+			<!-- Table Panel -->
+		</div>
     </div>
+
 </div>
+
 							
 					

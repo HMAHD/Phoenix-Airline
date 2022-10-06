@@ -17,3 +17,16 @@
  ?>
 
 </head>
+<style>
+	body{
+        background: #80808045;
+  }
+  .modal-dialog.large {
+    width: 80% !important;
+    max-width: unset;
+  }
+  .modal-dialog.mid-large {
+    width: 50% !important;
+    max-width: unset;
+  }
+</style>

@@ -23,6 +23,9 @@
 								<label class="control-label">Location</label>
 								<textarea name="location" id="" cols="30" rows="2" class="form-control"></textarea>
 							</div>
+					</div>
+
+
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12">
@@ -31,13 +34,30 @@
 							</div>
 					    </div>
 					</div>
-	
-							
-							
-					</div>
-                </div>	
+				</div>
+                	
             </form>
             </div>
+			<!-- FORM Panel -->
+
+			<!-- Table Panel -->
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-body">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th class="text-center">Airport</th>
+									<th class="text-center">Locoation</th>
+									<th class="text-center">Action</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+
         </div>
     </div>
 </div>

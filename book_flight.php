@@ -16,3 +16,16 @@
 			<button class="btn btn-secondary btn-block" type="button" data-dismiss="modal">Cancel</button>
 			</div>
 		</div>
+        </div>
+		<div id="row-field" style="display: none">
+			<div class="row ">
+				<div class="col-md-12 text-center">
+					<button class="btn btn-primary btn-sm " >Save</button>
+					<button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+		
+	</form>
+	</div>
+</div>

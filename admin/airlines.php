@@ -144,4 +144,20 @@
 		cat.find("#cimg").attr("src","../assets/img/"+$(this).attr('data-logo_path'))
 		end_load()
 	})
+
+	$('.delete_airline').click(function(){
+		_conf("Are you sure to delete this airline?","delete_airline",[$(this).attr('data-id')])
+	})
+	function displayImg(input,_this) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+        	$('#cimg').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
 </script>

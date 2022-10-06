@@ -103,3 +103,34 @@ if(isset($_GET['id'])){
 	</div>
 </div>
 
+<script>
+	$(document).ready(function(){
+		$('.select2').each(function(){
+		$(this).select2({
+		    placeholder:"Please select here",
+		    width: "100%"
+		  })
+	})
+	})
+	 $('.datetimepicker').datetimepicker({
+      format:'Y-m-d H:i',
+  })
+	 $('#manage-flight').submit(function(e){
+	 	e.preventDefault()
+	 	start_load()
+	 	$.ajax({
+	 		url:'ajax.php?action=save_flight',
+	 		method:'POST',
+	 		data:$(this).serialize(),
+	 		success:function(resp){
+	 			if(resp == 1){
+	 				alert_toast("Flight successfully saved.","success");
+	 				setTimeout(function(e){
+	 					location.reload()
+	 				},1500)
+	 			}
+	 		}
+	 	})
+	 })
+	 $('.datetimepicker').attr('autocomplete','off')
+</script>

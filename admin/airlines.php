@@ -159,5 +159,22 @@
     }
 }
 
+function delete_airline($id){
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=delete_airlines',
+			method:'POST',
+			data:{id:$id},
+			success:function(resp){
+				if(resp==1){
+					alert_toast("Data successfully deleted",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+
+				}
+			}
+		})
+	}
 
 </script>

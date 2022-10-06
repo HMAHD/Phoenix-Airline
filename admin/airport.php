@@ -134,6 +134,28 @@
 			}
 		})
 	})
+	$('.edit_airline').click(function(){
+		start_load()
+		var cat = $('#manage-airports')
+		cat.get(0).reset()
+		cat.find("[name='id']").val($(this).attr('data-id'))
+		cat.find("[name='airport']").val($(this).attr('data-airport'))
+		cat.find("[name='location']").val($(this).attr('data-location'))
+		end_load()
+	})
+	$('.delete_airline').click(function(){
+		_conf("Are you sure to delete this airline?","delete_airline",[$(this).attr('data-id')])
+	})
+	function displayImg(input,_this) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+        	$('#cimg').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 
 </script>
 							

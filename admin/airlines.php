@@ -135,5 +135,13 @@
 			}
 		})
 	})
-	
+	$('.edit_airline').click(function(){
+		start_load()
+		var cat = $('#manage-airlines')
+		cat.get(0).reset()
+		cat.find("[name='id']").val($(this).attr('data-id'))
+		cat.find("[name='airlines']").val($(this).attr('data-airlines'))
+		cat.find("#cimg").attr("src","../assets/img/"+$(this).attr('data-logo_path'))
+		end_load()
+	})
 </script>

@@ -79,9 +79,61 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- Table Panel -->
 
         </div>
     </div>
-<div>							
+</div>
+	
+<style>
+	
+	td{
+		vertical-align: middle !important;
+	}
+	td p{
+		margin: unset
+	}
+	img{
+		max-width:100px;
+		max-height:150px;
+	}
+</style>
+<script>
+	function _reset(){
+		$('#cimg').attr('src','');
+		$('[name="id"]').val('');
+		$('#manage-airlines').get(0).reset();
+	}
+	
+	$('#manage-airlines').submit(function(e){
+		e.preventDefault()
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=save_airlines',
+			data: new FormData($(this)[0]),
+		    cache: false,
+		    contentType: false,
+		    processData: false,
+		    method: 'POST',
+		    type: 'POST',
+			success:function(resp){
+				if(resp==1){
+					alert_toast("Data successfully added",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+
+				}
+				else if(resp==2){
+					alert_toast("Data successfully updated",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+
+				}
+			}
+		})
+	})
+	
+</script>

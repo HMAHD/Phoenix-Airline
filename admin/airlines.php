@@ -26,8 +26,8 @@
 							</div>	
 							
 							
-             		</div>
-
+					</div>
+							
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12">
@@ -36,9 +36,9 @@
 							</div>
 						</div>
 					</div>
-                </div>
-            </form>
-            </div>
+				</div>
+			</form>
+			</div>
 			<!-- FORM Panel -->
 
 			<!-- Table Panel -->
@@ -79,13 +79,11 @@
 					</div>
 				</div>
 			</div>
-
 			<!-- Table Panel -->
+		</div>
+	</div>	
 
-        </div>
-    </div>
 </div>
-	
 <style>
 	
 	td{
@@ -144,7 +142,6 @@
 		cat.find("#cimg").attr("src","../assets/img/"+$(this).attr('data-logo_path'))
 		end_load()
 	})
-
 	$('.delete_airline').click(function(){
 		_conf("Are you sure to delete this airline?","delete_airline",[$(this).attr('data-id')])
 	})
@@ -158,8 +155,7 @@
         reader.readAsDataURL(input.files[0]);
     }
 }
-
-function delete_airline($id){
+	function delete_airline($id){
 		start_load()
 		$.ajax({
 			url:'ajax.php?action=delete_airlines',
@@ -176,5 +172,4 @@ function delete_airline($id){
 			}
 		})
 	}
-
 </script>

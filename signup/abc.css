@@ -19,11 +19,7 @@ body{
   background: #f1f1f1;
 }
 
-/*  background color  */
-input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(105, 25, 25);
-  outline: none;
-}
+
 
 /*  all buttons */
 button {
@@ -68,7 +64,7 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
+  background-color: #22448f;
   padding-top: 50px;
 }
 /* Modal Content/Box */

@@ -170,4 +170,27 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 						<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>"  data-name="<?php echo $aname[$row['departure_airport_id']].' - '.$aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>">Book Now</button>
 					</div>
 				</div>
+                <hr class="divider" style="max-width: 60vw">
+				<?php endwhile; ?>
+				<?php else: ?>
+					<div class="row align-items-center">
+						<h5 class="text-center"><b>No result.</b></h5>
+					</div>
+				<?php endif; ?>
+				<?php endif; ?>
+				</div>
+				</div>
+        	</div>
+        </div>
+    </section>
+    <style>
+    	#flight img{
+    		max-height: 300px;
+    		max-width: 200px; 
+    	}
+    	#flight p{
+    		margin: unset
+      	}
+    </style>
+    <script>
     </script>

@@ -10292,3 +10292,108 @@ h6, .h6 {
            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
               transition: opacity 0.3s linear, right 0.3s ease-out;
     }
+
+    @media only screen and (max-width: 600px) {
+        .modal-dialog{
+           position: absolute;
+            width: 100vw !important;
+            top: 0px;
+            margin: unset;
+          }
+          #mainNav.navbar-scrolled {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+        }
+        }
+      .modal-full-height.modal-md .modal-body {
+          position: relative;
+          flex: 1 1 auto;
+          padding: 1rem;
+          overflow: auto;
+      }
+      .badge-light {
+          color: #212529;
+          background-color: #00030612;
+      }
+      .portfolio-box .project-name:hover {
+          color: white;
+          font-size: 3rem !important;
+          font-family: ui-rounded;
+          font-weight: 700;
+      }
+      .portfolio-box {
+          margin: 1em;
+          border-radius: 1em;
+          border: 1px solid #0053ffad;
+          cursor: pointer;
+      
+      }
+      .portfolio-box .port-content {
+          opacity: 0;
+          transition: all .5s ease-in-out;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          height: calc(100%);
+          width: calc(100%);
+          background: #0000008c;
+          border-radius: 1em !important;
+          top: 0;
+          border-color: #00c2ff;
+      }
+      .portfolio-box .port-content a{
+        margin:auto;
+        color:white;
+        font-weight: 500
+      }
+      
+      .portfolio-box:hover .port-content{
+          z-index: 1;
+          min-height: 7vh;
+          border-radius: 5px;
+          opacity:1;
+      }
+      #mainNav.navbar-scrolled {
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          background-color: #08c;
+          color: white !important;
+      }
+      #mainNav.navbar-scrolled .navbar-brand {
+          color: white;
+      }
+      .form-check,.form-check label{
+        cursor:pointer;
+      }
+      #mainNav.navbar-scrolled .navbar-brand a:hover {
+          color: white !important;
+      }
+      #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
+          color: #ffffff;
+      }
+      #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+          color: #dce2e8;
+      }
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: hidden;
+        background: #ffffff82;
+      }
+      
+      #preloader:before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        border: 6px solid #1977cc;
+        border-top-color: #d1e6f9;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: animate-preloader 1s linear infinite;
+        animation: animate-preloader 1s linear infinite;
+      }

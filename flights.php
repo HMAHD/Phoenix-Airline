@@ -26,4 +26,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                                                 $airport = $conn->query("SELECT * FROM airport_list order by airport asc");
                                             while($row = $airport->fetch_assoc()):
                                             ?>
+                                             <option value="<?php echo $row['id'] ?>" <?php echo isset($departure_airport_id) && $departure_airport_id == $row['id'] ? "selected" : '' ?>><?php echo $row['location'].", ".$row['airport'] ?></option>
+                                            <?php endwhile; ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="" class="control-label">To</label>
+                                            <select name="arrival_airport_id" id="arrival_airport_id" class="custom-select browser-default select2">
+
+                                                <option value=""></option>
+
+                                            <?php
+                                                $airport = $conn->query("SELECT * FROM airport_list order by airport asc");
+                                            while($row = $airport->fetch_assoc()):
+                                            ?>
     </script>

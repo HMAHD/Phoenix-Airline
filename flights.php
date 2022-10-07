@@ -193,4 +193,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
       	}
     </style>
     <script>
+
+                
+       $('.view_schedule').click(function(){
+			uni_modal($(this).attr('data-name')+" - Schedule","view_doctor_schedule.php?id="+$(this).attr('data-id'))
+		})
+       $('.book_flight').click(function(){
+       	if($(this).attr('data-max') <= 0){
+       		alert("There is no Available Seats for the selected flight");
+       		return false;
+       	}
+			uni_modal($(this).attr('data-name'),"book_flight.php?id="+$(this).attr('data-id')+"&max="+$(this).attr('data-max'),'mid-large')
+		})
+        $('[name="trip"]').on("keypress change keyup",function(){
+            if($(this).val() == 1){
+                $('#rdate').hide()
+            }else{
+                $('#rdate').show()
+            }
+        })
+    </script>
+	
+
     </script>

@@ -112,4 +112,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 					<div class="col-md-3">
 						<img src="assets/img/<?php echo $row['logo_path'] ?>" alt="">
 					</div>
+                    <div class="col-md-6">
+						 <p><b><?php echo $aname[$row['departure_airport_id']].' - '.$aname[$row['arrival_airport_id']] ?></b></p>
+						 <p><small>Airline: <b><?php echo $row['airlines'] ?></b></small></p>
+						 <p><small>Departure: <b><?php echo date('h:i A',strtotime($row['departure_datetime'])) ?></b></small></p>
+						 <p><small>Arrival: <b><?php echo (date('M d,Y',strtotime($row['departure_datetime'])) == date('M d,Y',strtotime($row['arrival_datetime']))) ? date('h:i A',strtotime($row['arrival_datetime'])) : date('M d,Y h:i A',strtotime($row['arrival_datetime'])) ?></b></small></p>
+						 <p>Available Seats : <b><h4><?php echo $row['seats'] - $booked ?></h4></b></p>
+					</div>
+					<div class="col-md-3 text-center align-self-end-sm">
+						<h4 class="text-right"><b><?php echo number_format($row['price'],2) ?></b></h4>
+						<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>"  data-name="<?php echo $aname[$row['departure_airport_id']].' - '.$aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>">Book Now</button>
+					</div>
+				</div>
     </script>

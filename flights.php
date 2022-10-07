@@ -84,4 +84,32 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 </div>
             </div>
         </header>
+        <section class="page-section" id="flight" >
+        <div class="container">
+        	<div class="card">
+        		<div class="card-body">
+        			<div class="col-lg-12">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h2><b><?php echo isset($trip) && $trip == 2 ? "Departure Searched Flight results..." : ( !isset($trip)? " Flights Available " :"Searched Flight results...")  ?></b></h2>
+							</div>
+						</div>
+						<hr class="divider">
+				<?php 
+				$airport = $conn->query("SELECT * FROM airport_list ");
+				while($row = $airport->fetch_assoc()){
+					$aname[$row['id']] = ucwords($row['airport'].', '.$row['location']);
+				}
+				$where = " where date(f.departure_datetime) > '".date("Y-m-d")."' ";
+				if($_SERVER['REQUEST_METHOD'] == "POST" )
+				$where .= " and f.departure_airport_id ='$departure_airport_id' and f.arrival_airport_id = '$arrival_airport_id' and date(f.departure_datetime) = '".date('Y-m-d',strtotime($date))."'  ";
+				$flight = $conn->query("SELECT f.*,a.airlines,a.logo_path FROM flight_list f inner join airlines_list a on f.airline_id = a.id $where order by rand()");
+				if($flight->num_rows > 0):
+				while($row=$flight->fetch_assoc()):
+					$booked = $conn->query("SELECT * FROM booked_flight where flight_id = ".$row['id'])->num_rows;
+				?>
+				<div class="row align-items-center">
+					<div class="col-md-3">
+						<img src="assets/img/<?php echo $row['logo_path'] ?>" alt="">
+					</div>
     </script>
